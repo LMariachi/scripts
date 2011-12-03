@@ -1,0 +1,13 @@
+#!/bin/sh -
+
+if [ -x /opt/local/bin/slocate ]; then
+    echo ""
+    echo "Rebuilding slocate database:"
+    if [ -f /opt/local/etc/updatedb.conf ]; then
+		# One day, I'll look at the bug that requires doing cd / when launched
+		# with periodic.
+		(cd / && /opt/local/bin/slocate -u -c)
+	else
+		(cd / && /opt/local/bin/slocate -u)
+	fi
+fi

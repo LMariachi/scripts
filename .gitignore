@@ -1,0 +1,27 @@
+*[Cc]ache*
+*\.lock
+*socket*
+.DS_Store
+.Trash/
+.git/
+.macports/
+.openvasrc
+.wine/
+Azureus\ Downloads/
+Documents/Graphic\ Sportswear\ \&\ Medium\ Cool/
+Documents/OmniFocus\ Backups/
+Downloads\-BT/
+EyeTV\ Archive/
+Library/Application\ Support/CelestiaResources/
+Library/Application\ Support/NCH\ Software/Scribe/
+Library/Application\ Support/Steam/
+Library/Application\ Support/Thunderbird/
+Library/Calendars/
+Library/PubSub/
+Library/Thunderbird/
+Movies/
+Music/
+QUARANTINE/
+Sites/
+VIDEO_TS/
+[Cc]ache*/

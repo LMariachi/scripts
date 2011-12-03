@@ -1,0 +1,14 @@
+#!/opt/local/bin/bash
+
+MAILTO=ludwig@localhost
+PORTUPDATE=/tmp/portupdate_`date +%s`
+export HOME=/Users/ludwig
+
+/opt/local/bin/port selfupdate &> $PORTUPDATE
+/bin/echo " " >> $PORTUPDATE
+/opt/local/bin/port outdated >> $PORTUPDATE 2>&1
+
+/usr/bin/mail -s "Port update results" $MAILTO < $PORTUPDATE
+
+# rm $PORTUPDATE
+
