@@ -17,9 +17,9 @@ fi
 
 /opt/local/bin/rdiff-backup -v5 --print-statistics --carbonfile --exclude-sockets --exclude-globbing-filelist=${HOME}/scripts/.rdiffexclude ${HOME}/scripts metaspasm::/home/elmariachi/rdiffbackups/scripts 
 
-#rsync -avz --stats --exclude-from=- --exclude-from='/Users/ludwig/.rsync_exclusions' /Users/ludwig/.* /Users/         ludwig/dotfiles/  
+#rsync -avz --stats --exclude-from=- --exclude-from='/Users/ludwig/.rsync_exclusions' /Users/ludwig/.* /Users/ludwig/dotfiles/  
 
-/opt/local/bin/rdiff-backup -v5 --print-statistics --carbonfile --exclude-globbing-filelist=$HOM./dotfiles/.rdiffexclude ${HOME}/dotfiles metaspasm::/home/elmariachi/rdiffbackups/dotfiles  
+/opt/local/bin/rdiff-backup -v5 --print-statistics --carbonfile --exclude-globbing-filelist=${HOME}/dotfiles/.rdiffexclude ${HOME}/dotfiles metaspasm::/home/elmariachi/rdiffbackups/dotfiles  
 
 /opt/local/bin/rdiff-backup -v5 --print-statistics --carbonfile --exclude-sockets --exclude-globbing-filelist=${HOME}/Library/.rdiffexclude ${HOME}/Library metaspasm::/home/elmariachi/rdiffbackups/library
 
