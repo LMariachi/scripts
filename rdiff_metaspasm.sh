@@ -1,6 +1,6 @@
 #!/opt/local/bin/bash
 
-MAILTO=ludwig@localhost
+MAILTO='-c ludwig@localhost ludwig@metaspasm.org'
 RDIFFSTATUS=/tmp/rdiffstatus_`date +%s`
 
 
@@ -24,7 +24,7 @@ fi
 /opt/local/bin/rdiff-backup -v5 --print-statistics --carbonfile --exclude-sockets --exclude-globbing-filelist=${HOME}/Library/.rdiffexclude ${HOME}/Library metaspasm::/home/elmariachi/rdiffbackups/library
 
 for i in /Volumes/metaspasm/rdiffbackups/*
-        do echo -e '\n'$i 
+        do echo -e '\n'$i >> ${RDIFFSTATUS} 2>&1
         /opt/local/bin/rdiff-backup --list-increment-sizes $i >> ${RDIFFSTATUS} 2>&1
 done
 
